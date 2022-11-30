@@ -115,6 +115,11 @@ class MainMenuState extends MusicBeatState
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
+		
+		#if android
+	        addVirtualPad(UP_DOWN, A_B);
+                #end
+	}
 
 		if (!selectedSomethin)
 		{
