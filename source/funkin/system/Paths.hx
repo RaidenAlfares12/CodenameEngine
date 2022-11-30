@@ -7,6 +7,8 @@ import openfl.utils.AssetType;
 import openfl.utils.Assets as OpenFlAssets;
 import funkin.mods.ModsFolder;
 import funkin.scripting.Script;
+import sys.io.File;
+import sys.FileSystem;
 
 using StringTools;
 
