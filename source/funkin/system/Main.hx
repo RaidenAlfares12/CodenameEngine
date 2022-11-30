@@ -51,6 +51,7 @@ class Main extends Sprite
 
 	public function new()
 	{
+	   SUtil.uncaughtErrorHandler();
 		super();
 
 		if (stage != null)
@@ -91,6 +92,7 @@ class Main extends Sprite
 		initialState = TitleState;
 		#end
 
+        SUtil.check()
 
 		addChild(new FlxGame(gameWidth, gameHeight, null, zoom, framerate, framerate, skipSplash, startFullscreen));
 		loadGameSettings();
@@ -98,6 +100,8 @@ class Main extends Sprite
 		
 		#if !mobile
 		addChild(new FramerateField(10, 3, 0xFFFFFF));
+		FlxG.autoPause = false;
+		FlxG.mouse.visible = true;
 		#end
 	}
 
