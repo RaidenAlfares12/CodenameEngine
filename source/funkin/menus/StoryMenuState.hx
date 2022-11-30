@@ -15,6 +15,9 @@ import funkin.ui.FunkinText;
 import haxe.xml.Access;
 import flixel.FlxSprite;
 import flixel.text.FlxText;
+import sys.io.File;
+import sys.FileSystem;
+import spine.support.files.FileHandle;
 
 class StoryMenuState extends MusicBeatState {
     public var characters:Map<String, MenuCharacter> = [];
@@ -68,6 +71,10 @@ class StoryMenuState extends MusicBeatState {
         weekBG.updateHitbox();
 
         weekSprites = new FlxTypedGroup<MenuItem>();
+        
+        #if android
+	        addVirtualPad(FULL, A_B_C_X_Y);
+                #end
 
         // DUMBASS ARROWS
 		var assets = Paths.getSparrowAtlas('menus/storymenu/assets');
