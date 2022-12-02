@@ -59,8 +59,6 @@
 	<assets path="assets/"    rename="assets"	exclude="*.ogg" if="web"/>
 	<assets path="assets/"    rename="assets"	exclude="*.mp3" unless="web"/>
 	
-	<assets path="mobile" rename="assets/mobile" if="mobile" /> <!-- to not have the mobile assets in another builds -saw -->
-	
 	<assets path='example_mods' rename='mods' embed='false'/>
 	<assets path='art/readme.txt' rename='do NOT readme.txt' />
 	<!-- <template path='mods' /> -->
